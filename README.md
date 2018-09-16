@@ -1,22 +1,30 @@
 # url_text_parser
-Environment
+--Environment
 
 Raspberry pi 3B   
 Unbuntu-mate 16.04  
 Python 3.5
 
-Dependencies
+--Dependencies
+
 python package: requests
 
-Run
+--Run
+
 python3 run.py
 
-Unit Test
+--Unit Test
+
 python test_unit.py
 
-Resource
+--Test report
+测试用例报告.numbers
+
+--Resource
+
 file_remote.txt file_remote_small.txt   -- URL file for downloading
 
-Output
+--Output
+
 file_local.txt   -- Copy of URL file
 result.txt       -- Parse result
