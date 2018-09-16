@@ -40,5 +40,15 @@ def test_result_export():
 #test_file_copy()
 
 #case 1: target file exist, target col valid
-#2: 
+#2: file not exist
+#3: col is invalid
 test_col_extract()
+
+#case 1: target list exist
+#case 2: list not exist
+#case 3: need to remain stable when sorting (item with same key)
+#4: need to support ascend and descend sorting
+test_sorting()
+
+#case 1: 
+test_result_export()
