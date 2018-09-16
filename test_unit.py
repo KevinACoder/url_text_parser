@@ -1,10 +1,10 @@
 import implement as imp
 
 def test_url_download():
-	urls = ['https://github.com/KevinACoder/url_text_parser/blob/master/file_remote.txt',
-	'https://github.com/KevinACoder/url_text_parser/blob/master/file_remote_small.txt',
+	urls = ['https://github.com/KevinACoder/url_text_parser/raw/master/file_remote.txt',
+	'https://github.com/KevinACoder/url_text_parser/raw/master/file_remote_small.txt',
 	'https://not_exist_file.txt',
-	'https://github.com/KevinACoder/url_text_parser/blob/master/not_text.jpg']
+	'https://github.com/KevinACoder/url_text_parser/raw/master/not_text.jpg']
 
 	for url in urls:
 		raw_data, state = imp.download_file(url)

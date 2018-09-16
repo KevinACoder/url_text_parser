@@ -1,6 +1,4 @@
 import requests
-#import nltk, re, pprint
-#from nltk import word_tokenize
 from collections import Counter
 
 def download_file(url):
@@ -31,10 +29,10 @@ def count_item(items):
 	occurance = Counter(items)
 	return occurance
 
-def export_result(occurance, export_path):
+def export_result(occurance, export_path, num):
 	sorted_item = []
 	count = 0
-	for item, times in occurance.most_common()[:]:
+	for item, times in occurance.most_common(num)[:]:
 		if count < 10:
 			sorted_item.append(item + "\r\n")
 			print(item)
