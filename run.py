@@ -1,7 +1,10 @@
 import implement as imp
 
 url = 'http://www.gutenberg.org/files/2554/2554-0.txt'
-raw_data = imp.download_file(url)
+raw_data, state = imp.download_file(url)
+print(type(raw_data))
+if state == False:
+	exit('exit... download url file fail !!')
 print('downloaded')
 local_path = './file_local.txt'
 imp.create_local_file(raw_data, local_path)

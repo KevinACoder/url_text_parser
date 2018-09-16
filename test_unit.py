@@ -1,8 +1,16 @@
 import implement as imp
 
 def test_url_download():
-	url = 'http://www.gutenberg.org/files/2554/2554-0.txt'
-	raw_data = imp.download_file(url)
+	urls = ['https://github.com/KevinACoder/url_text_parser/blob/master/file_remote.txt',
+	'https://github.com/KevinACoder/url_text_parser/blob/master/file_remote_small.txt',
+	'https://not_exist_file.txt',
+	'https://github.com/KevinACoder/url_text_parser/blob/master/not_text.jpg']
+
+	for url in urls:
+		raw_data, state = imp.download_file(url)
+		if state == False:
+			print('fail')
+
 	return
 
 def test_file_copy():
@@ -28,27 +36,9 @@ def test_result_export():
 	imp.export_result(occurance, export_path)
 	return
 
-#case 1: network is reachable, url valid
-#2: network is reachable, url invalid
-#3: network not reachable
-#test_url_download()
 
-#case 1: target file not yet created
-#2: target file exist
-#3: max size of content can be load to save to file
-#4: encoding, need to support unicode or not
-#test_file_copy()
-
-#case 1: target file exist, target col valid
-#2: file not exist
-#3: col is invalid
+test_url_download()
+test_file_copy()
 test_col_extract()
-
-#case 1: target list exist
-#case 2: list not exist
-#case 3: need to remain stable when sorting (item with same key)
-#4: need to support ascend and descend sorting
-test_sorting()
-
-#case 1: 
+test_sorting() 
 test_result_export()
