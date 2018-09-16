@@ -1,5 +1,5 @@
 # url_text_parser
-Environment 
+Environment
 Raspberry pi 3B   
 Unbuntu-mate 16.04  
 Python 3.5
